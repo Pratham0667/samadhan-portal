@@ -1,0 +1,114 @@
+:root {
+  font-family: Inter, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #1c2b22;
+  background: #f4f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+  --page: #f4f7f2;
+  --surface: #ffffff;
+  --text: #1c2b22;
+  --muted: #53645a;
+  --line: #d6e0d7;
+  --accent: #286443;
+  --accent-hover: #1e5236;
+  --accent-contrast: #ffffff;
+  --accent-soft: #e8f0e9;
+  --notice: #edf3ed;
+  --focus: #286443;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ecf2ec;
+    background: #121a15;
+    color-scheme: dark;
+    --page: #121a15;
+    --surface: #19231c;
+    --text: #ecf2ec;
+    --muted: #b5c3b8;
+    --line: #35443a;
+    --accent: #8bc39b;
+    --accent-hover: #a3d5b0;
+    --accent-contrast: #132118;
+    --accent-soft: #263a2c;
+    --notice: #202d24;
+    --focus: #a3d5b0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
